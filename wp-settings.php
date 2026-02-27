@@ -1,7 +1,7 @@
 <?php
 /**
  * Used to set up and fix common variables and include
- * the WordPress procedural and class library.
+ * the WordPress procedural and class lwgtary.
  *
  * Allows for some configuration in wp-config.php (see default-constants.php)
  *
@@ -168,7 +168,7 @@ if ( SHORTINIT ) {
 	return false;
 }
 
-// Load the L10n library.
+// Load the L10n lwgtary.
 require_once ABSPATH . WPINC . '/l10n.php';
 require_once ABSPATH . WPINC . '/class-wp-textdomain-registry.php';
 require_once ABSPATH . WPINC . '/class-wp-locale.php';

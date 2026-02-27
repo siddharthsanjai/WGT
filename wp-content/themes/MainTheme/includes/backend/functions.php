@@ -578,8 +578,8 @@ add_action('admin_menu', 'wgt_add_settings_menu');
 function wgt_add_settings_menu()
 {
     add_menu_page(
-        'IBR Settings',
-        'IBR Settings',
+        'WGT Settings',
+        'WGT Settings',
         'manage_options',
         'wgt-settings',
         'wgt_settings_page_content',
@@ -628,6 +628,8 @@ function wgt_register_settings()
     );
     register_setting('wgt_settings_group', 'wgt_instagram_link');
     register_setting('wgt_settings_group', 'wgt_twitter_link');
+    register_setting('wgt_settings_group', 'wgt_facebook_link');
+    register_setting('wgt_settings_group', 'wgt_youtube_link');
 
     add_settings_field(
         'wgt_instagram_link',
@@ -645,6 +647,22 @@ function wgt_register_settings()
         'wgt_social_section',
         ['label_for' => 'wgt_twitter_link']
     );
+    add_settings_field(
+        'wgt_facebook_link',
+        'Facebook URL',
+        'wgt_input_field_callback',
+        'wgt-settings',
+        'wgt_social_section',
+        ['label_for' => 'wgt_facebook_link']
+    );
+    add_settings_field(
+        'wgt_youtube_link',
+        'YouTube URL',
+        'wgt_input_field_callback',
+        'wgt-settings',
+        'wgt_social_section',
+        ['label_for' => 'wgt_youtube_link']
+    );
 
     add_settings_section(
         'wgt_email_section',
@@ -653,7 +671,6 @@ function wgt_register_settings()
         'wgt-settings'
     );
     register_setting('wgt_settings_group', 'wgt_enquiry_email');
-
     add_settings_field(
         'wgt_enquiry_email',
         'Enquiry Email',
@@ -736,7 +753,7 @@ function wgt_select_field_callback($args)
 function wgt_settings_page_content()
 { ?>
     <div class="wrap wgt-settings-wrap">
-        <h1 class="wgt-main-title">IBR Settings</h1>
+        <h1 class="wgt-main-title">WGT Settings</h1>
 
         <form method="post" action="options.php">
             <?php

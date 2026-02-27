@@ -9,19 +9,19 @@ class IBR_Payments_List_Table extends WP_List_Table
     function get_columns()
     {
         return [
-            'sno'           => __('S.No', 'ibr'),
-            'paid_at'       => __('Payment Date', 'ibr'),
-            'application_id' => __('Application ID', 'ibr'),
-            'receipt_id'    => __('Receipt No', 'ibr'),
-            'id'  => __('Reference ID', 'ibr'),
-            'gateway'  => __('Payment Type', 'ibr'),
-            'user_reg_id'   => __('User Reg ID', 'ibr'),
-            'user_email'    => __('User Email', 'ibr'),
-            'gateway'       => __('Gateway', 'ibr'),
-            'country'       => __('Country', 'ibr'),
-            'amount'        => __('Amount', 'ibr'),
-            'status'        => __('Status', 'ibr'),
-            'actions'       => __('Actions', 'ibr'),
+            'sno'           => __('S.No', 'wgt'),
+            'paid_at'       => __('Payment Date', 'wgt'),
+            'application_id' => __('Application ID', 'wgt'),
+            'receipt_id'    => __('Receipt No', 'wgt'),
+            'id'  => __('Reference ID', 'wgt'),
+            'gateway'  => __('Payment Type', 'wgt'),
+            'user_reg_id'   => __('User Reg ID', 'wgt'),
+            'user_email'    => __('User Email', 'wgt'),
+            'gateway'       => __('Gateway', 'wgt'),
+            'country'       => __('Country', 'wgt'),
+            'amount'        => __('Amount', 'wgt'),
+            'status'        => __('Status', 'wgt'),
+            'actions'       => __('Actions', 'wgt'),
         ];
     }
 

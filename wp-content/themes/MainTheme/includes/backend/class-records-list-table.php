@@ -106,7 +106,7 @@ class Records_List_Table extends WP_List_Table
 
         if ($country) {
             $where_clauses[] = "r.country = %s";
-            $params[] = ibr_get_country_name_by_code($country) ?: $country;
+            $params[] = wgt_get_country_name_by_code($country) ?: $country;
         }
 
         if ($state) {
@@ -228,7 +228,7 @@ class Records_List_Table extends WP_List_Table
 
             case 'lead_stage':
                 $html = '<select class="update_record active_disable" data-id="' . esc_attr($item['id']) . '" data-module="records" data-action_type="lead_stage" ' . ($item['status'] === 'Inactive' ? 'disabled' : '') . '>';
-                foreach (ibr_get_lead_stages() as $stage) {
+                foreach (wgt_get_lead_stages() as $stage) {
                     $selected = ($item['lead_stage'] === $stage) ? 'selected' : '';
                     $html .= '<option value="' . esc_attr($stage) . '" ' . $selected . '>' . esc_html($stage) . '</option>';
                 }
@@ -266,15 +266,15 @@ class Records_List_Table extends WP_List_Table
                 return '<input type="text" class="update_record" data-id="' . esc_attr($item['id']) . '" value="' . esc_attr($item['lead_owner']) . '" data-module="records" data-action_type="lead_owner"/>';
 
             case 'category_fee_id':
-                $category = ibr_get_category_by_fee_id($item['category_fee_id']);
+                $category = wgt_get_category_by_fee_id($item['category_fee_id']);
                 // Assuming a function get_category_name exists to fetch category name by ID
                 return esc_html($category ? $category->name : 'Unknown');
 
             case 'action':
                 $record_id = $item['id'];
                 return '
-                <a class="button button-primary" href="' . 'admin.php?page=ibr&tab=records&section=basicdetails&id=' . esc_attr($record_id) . '">Edit</a<br>
-                <a class="button button-primary" href="admin.php?page=ibr&tab=records&action=participants&id=' . esc_attr($record_id) . '">Participants</>
+                <a class="button button-primary" href="' . 'admin.php?page=wgt&tab=records&section=basicdetails&id=' . esc_attr($record_id) . '">Edit</a<br>
+                <a class="button button-primary" href="admin.php?page=wgt&tab=records&action=participants&id=' . esc_attr($record_id) . '">Participants</>
             ';
 
             case 'participants':

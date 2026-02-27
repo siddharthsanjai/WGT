@@ -20,7 +20,7 @@ if (isset($_GET['tab']) && $_GET['tab'] == 'admin') { ?>
 <div class="wrap">
     <?php include_once get_template_directory() . '/page-templates/admin/tabs.php'; ?>
 
-    <h1>IBR Admin - Roles Management</h1>
+    <h1>WGT Admin - Roles Management</h1>
 
     <?php if (wgt_has_edit_access()) { ?>
         <!-- Add New User Button -->
@@ -638,7 +638,7 @@ if (isset($_GET['tab']) && $_GET['tab'] == 'admin') { ?>
         position: absolute !important;
         background: white;
         max-height: 250px;
-        overflow-y: auto;ibr
+        overflow-y: auto;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border: 1px solid #ccc;
         margin-top: 2px;

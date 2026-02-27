@@ -1,0 +1,845 @@
+.wgt-dashboard {
+    background: #f5f7fb;
+    padding: 30px 25px;
+}
+
+/* Tabs container */
+.wgt-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+/* Tab buttons */
+.tab-button {
+    padding: 10px 20px;
+    background: #f1f1f1;
+    border: 1px solid #ccd0d4;
+    border-bottom: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.71428571;
+    font-weight: 600;
+    color: #555;
+    border-radius: 4px 4px 0 0;
+    /* rounded top */
+    transition: all 0.2s ease;
+}
+
+
+/* Hover effect */
+.tab-button:hover {
+    background: #f9f9f9;
+    color: #0073aa;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    text-decoration: none;
+    font-weight: 500;
+    color: #374151;
+    transition: all 0.2s ease;
+}
+
+/* Active tab */
+.tab-button.active {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+
+/* Tab content wrapper */
+.tab-content {
+    padding: 20px 0;
+}
+
+/* Tab panels */
+.tab-pane {
+    display: none;
+    padding: 20px 0;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+
+.filter-section {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+#date-filter {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    min-width: 180px;
+}
+
+.filter-section select,
+.filter-section input[type="text"] {
+    margin-right: 10px;
+    min-width: 200px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-box {
+    background: #ffffff;
+    border: 1px solid #004b6e;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.stat-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.stat-box h3 {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: #0073aa;
+}
+.tab-content {
+    background: transparent;
+}
+
+.chart-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Admin Dashboard Styles */
+#admin .wrap {
+    background: transparent !important;
+    padding: 0;
+}
+#admin .wrap > div {
+    
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+#admin h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 20px;
+}
+#admin .filter-section {
+    background: #f9fafb;
+    padding: 18px 20px;
+    border-radius: 14px;
+    margin: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+/* Users List Table */
+.users-list {
+    margin-top: 20px;
+}
+
+.wp-list-table {
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+}
+
+.wp-list-table th {
+    font-weight: 600;
+    text-align: left;
+    padding: 8px;
+}
+
+.wp-list-table td {
+    padding: 8px;
+    vertical-align: middle;
+}
+
+/* Role Creation Form */
+.role-creation-form {
+    max-width: 800px;
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+}
+
+.role-creation-form h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-table th {
+    width: 200px;
+    padding: 15px 10px 15px 0;
+}
+
+.form-table td {
+    padding: 15px 10px;
+}
+
+.form-table input[type="text"],
+.form-table input[type="email"],
+.form-table input[type="tel"],
+.form-table input[type="password"],
+.form-table select {
+    width: 25em;
+    max-width: 100%;
+}
+
+/* Password Strength Meter */
+#password-strength {
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.very-weak {
+    background: #ffb6b6;
+}
+
+.weak {
+    background: #ffd6b6;
+}
+
+.medium {
+    background: #fff6b6;
+}
+
+.strong {
+    background: #b6ffb6;
+}
+
+.very-strong {
+    background: #b6ffd6;
+}
+
+/* Status Indicators */
+.status-active {
+    color: #46b450;
+}
+
+.status-inactive {
+    color: #dc3232;
+}
+
+/* Buttons */
+.button {
+    margin-right: 5px;
+}
+
+.button-primary {
+    background: #0073aa;
+    border-color: #006291;
+    color: #fff;
+}
+
+.button-primary:hover {
+    background: #006291;
+    border-color: #004b6e;
+}
+
+/* Profile Photo Upload */
+#profile-preview {
+    margin-top: 10px;
+}
+
+#profile-preview img {
+    max-width: 200px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    background: #fff;
+}
+
+/* Form Validation */
+.error {
+    border-color: #dc3232 !important;
+}
+
+.success {
+    color: #46b450;
+}
+
+/* Pagination */
+.tablenav {
+    margin: 6px 0 4px;
+}
+
+.tablenav-pages {
+    float: right;
+    margin: 0 0 9px;
+}
+
+.tablenav-pages a,
+.tablenav-pages span {
+    display: inline-block;
+    min-width: 17px;
+    padding: 0 4px;
+    margin: 0 2px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    background: #f7f7f7;
+    color: #555;
+}
+
+.tablenav-pages .current {
+    background: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+
+/* Success Message */
+.notice-success {
+    background: #f0f8f0;
+    border-left: 4px solid #46b450;
+    padding: 12px;
+    margin: 15px 0;
+}
+
+/* Error Message */
+.notice-error {
+    background: #fef7f7;
+    border-left: 4px solid #dc3232;
+    padding: 12px;
+    margin: 15px 0;
+}
+
+/* Records Table */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #4CAF50;
+}
+
+input:checked+.slider:before {
+    transform: translateX(20px);
+}
+
+.status-toggle-wrapper {
+    display: inline-block;
+    text-align: center;
+}
+
+.status-label {
+    font-size: 13px;
+}
+
+/** Records Table */
+#records .wrap {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+#records .filter-section {
+    background: #f9fafb;
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+}
+
+#records .filter-section .filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+#records select,
+#records input[type="text"],
+#records input[type="date"] {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+#records input:focus,
+#records select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}
+
+#records table {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+#records table thead {
+    background: #f8fafc;
+}
+
+#records table th {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #475569;
+    padding: 13px 15px;
+    border-bottom: 1px solid #e5e7eb;
+}
+#records table td {
+    padding: 16px 18px;
+    font-size: 14px;
+    color: #111827;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+#records table tbody tr:last-child td {
+    border-bottom: none;
+}
+#records table tbody tr {
+    transition: background 0.2s ease;
+}
+
+#records table tbody tr:hover {
+    background: #f3f4f6;
+}
+/* Center small columns */
+#records table td:nth-child(1),
+#records table td:nth-child(2) {
+    text-align: center;
+}
+
+/* Right align numeric columns if needed */
+#records table td:last-child {
+    text-align: right;
+}
+
+
+.wgt-table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+.wgt-table-wrapper .wp-list-table {
+    min-width: 1800px;
+    /* Increased width for more space */
+    table-layout: auto;
+    /* Allow dynamic column widths */
+}
+
+.wgt-table-wrapper .wp-list-table th,
+.wgt-table-wrapper .wp-list-table td {
+    white-space: nowrap;
+    padding: 10px 16px;
+    font-size: 14px;
+}
+
+.wgt-records-table tr.row-disabled {
+    background-color: #f5f5f5;
+    /* Light grey */
+    color: #999;
+    pointer-events: none;
+    /* Prevent clicks on links/buttons inside */
+    opacity: 0.6;
+}
+
+/* Optional: Make long text fit better */
+.wgt-table-wrapper .wp-list-table td {
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Sticky header */
+.wgt-table-wrapper .wp-list-table thead th {
+    position: sticky;
+    top: 0;
+    background: #f8f8f8;
+    z-index: 2;
+}
+
+/* Form element control */
+.wgt-table-wrapper select,
+.wgt-table-wrapper input,
+.wgt-table-wrapper textarea {
+    max-width: 200px;
+    width: 100%;
+}
+
+.wgt-modern-filters {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-family: "Inter", sans-serif;
+}
+
+.wgt-filters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.wgt-filter label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+    color: #333;
+}
+
+.wgt-filter select,
+.wgt-filter input[type="date"],
+.wgt-search-wrap input[type="text"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.wgt-date-range {
+    display: flex;
+    gap: 10px;
+}
+
+.wgt-search-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.wgt-search-wrap input {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.notice.notice-error {
+    display: none;
+}
+
+.highlight-ribbon {
+    position: absolute;
+    top: 10px;
+    left: -35px;
+    transform: rotate(-45deg);
+    background: yellow;
+    color: black;
+    font-weight: bold;
+    padding: 5px 40px;
+    font-size: 12px;
+}
+
+/**Participants Page **/
+.participants-page .participants-toolbar {
+    margin: 15px 0;
+}
+
+.participants-page .participants-meta {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.participants-page table.wp-list-table td {
+    vertical-align: middle;
+}
+
+.participants-page .row-actions {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.participants-page .row-actions a {
+    margin-right: 8px;
+    text-decoration: none;
+}
+
+.participants-page .edit-btn {
+    color: #0073aa;
+}
+
+.participants-page .delete-btn {
+    color: #d63638;
+}
+
+.payment-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    /* ensures it is above WP admin UI */
+}
+
+.payment-modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.payment-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.wp-list-table tr.row-unseen {
+    background-color: #98a6ad;  /* dark grey */
+    color: #fff;             /* white text */
+}
+
+/* Optional: ensure table cells inherit the text color */
+.wp-list-table tr.row-unseen td {
+    color: #fff;
+}
+/* == WP Admin CSS == */
+
+.iti__flag-container {
+    position: absolute;
+    top: 5px;
+}
+
+.iti__flag-container  .iti__selected-flag {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.iti__country-list {
+    height: 150px;
+    margin-top: 15px;
+}
+
+body .form-control.iti__tel-input {
+    padding-left: 10px !important;
+    max-width: 320px;
+    width: 100%;
+    left: 65px;
+}
+
+#wpadminbar .wgt-bell {
+  color: #fff;
+  cursor: pointer;
+}
+
+#wpadminbar .wgt-count {
+  background: #ff3b3b;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 20px;
+  margin-left: 4px;
+}
+
+#wpadminbar #wgt_notifications {
+  position: relative;
+}
+
+#wpadminbar #wgt-admin-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 3px 5px rgba(0,0,0,.2);
+  border-radius: 6px;
+  width: 200px;
+  z-index: 99999;
+}
+
+#wpadminbar .notification-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+#wpadminbar .notification-list li {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  background: #fff;
+}
+
+#wpadminbar .notification-list li:hover {
+  background: #f6f7f7;
+}
+/*certificate fee*/
+#certificate-fees .wrap {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+#certificate-fees h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 20px;
+}
+#certificate-fees table.widefat {
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+#certificate-fees table thead {
+    background: #f9fafb;
+}
+
+#certificate-fees table th {
+    font-weight: 600;
+    color: #374151;
+    padding: 14px;
+}
+
+#certificate-fees table td {
+    padding: 14px;
+    border-top: 1px solid #f1f5f9;
+}
+
+#certificate-fees table tbody tr:hover {
+    background: #f3f4f6;
+}
+#certificate-fees table td:last-child,
+#certificate-fees table th:last-child {
+    text-align: right;
+    font-weight: 600;
+    color: #111827;
+}
+#users .wrap {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+/* CATEGORY FEES PAGE */
+body.wgt_page_wgt-category-fees .wrap table.widefat {
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+body.wgt_page_wgt-category-fees .wrap table.widefat th {
+    background: #f8fafc;
+    padding: 16px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #475569;
+}
+
+body.wgt_page_wgt-category-fees .wrap table.widefat td {
+    padding: 16px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+body.wgt_page_wgt-category-fees .wrap table.widefat tbody tr:hover {
+    background: #f3f4f6;
+}
+/* CATEGORY FEES TABS */
+body.wgt_page_wgt-category-fees .nav-tab-wrapper {
+    border: none;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+body.wgt_page_wgt-category-fees .nav-tab {
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 8px 18px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+body.wgt_page_wgt-category-fees .nav-tab:hover {
+    background: #f3f4f6;
+}
+
+body.wgt_page_wgt-category-fees .nav-tab-active {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+    box-shadow: 0 6px 15px rgba(37,99,235,0.25);
+}

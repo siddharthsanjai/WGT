@@ -47,8 +47,8 @@ get_header();
 
                         <!-- Hero Button Start -->
                         <div class="hero-btn wow fadeInUp" data-wow-delay="0.6s">
-                            <a href="contact.html" class="btn-default btn-highlighted">Join the club</a>
-                            <a href="contact.html" class="btn-default btn-highlighted btn-transparent">View Schedule</a>
+                            <a href="contact.html" class="btn-default btn-highlighted">Apply Now</a>
+                            <a href="contact.html" class="btn-default btn-highlighted btn-transparent">View Records</a>
                         </div>
                         <!-- Hero Button End -->
                     </div>
@@ -613,7 +613,7 @@ get_header();
                                         <!-- Match Highlight Item Image Start -->
                                         <div class="match-highlight-item-image">
                                             <figure class="image-anime">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/match-highlight-image-1.jpg"
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/womenscroll.png"
                                                     alt="">
                                             </figure>
                                         </div>
@@ -622,14 +622,11 @@ get_header();
                                         <!-- Match Highlight Item Body Start -->
                                         <div class="match-highlight-item-body">
                                             <div class="match-highlight-item-content">
-                                                <h3>Epic Showdown! Thunder FC vs United - All the Goal & Drama!</h3>
+                                                <h3></h3>
                                             </div>
-                                            <div class="match-highlight-video-btn">
-                                                <a href="https://www.youtube.com/watch?v=Y-x0efG1seA"
-                                                    class="popup-video" data-cursor-text="Play">
-                                                    <i class="fa-solid fa-play"></i>
-                                                </a>
-                                                <p>5:27 mins</p>
+                                            <div class="">
+                                                <a href="/world-record-detail" class="readmore-btn">World Record</a>
+                                                <p></p>
                                             </div>
                                         </div>
                                         <!-- Match Highlight Item Body End -->
@@ -645,7 +642,7 @@ get_header();
                                         <!-- Match Highlight Item Image Start -->
                                         <div class="match-highlight-item-image">
                                             <figure class="image-anime">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/match-highlight-image-3.jpg"
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/womenscroll.png"
                                                     alt="">
                                             </figure>
                                         </div>
@@ -654,14 +651,11 @@ get_header();
                                         <!-- Match Highlight Item Body Start -->
                                         <div class="match-highlight-item-body">
                                             <div class="match-highlight-item-content">
-                                                <h3>Leo Storm's Hat-Trick! Thunder FC vs Blaze United Highlights</h3>
+                                                <h3></h3>
                                             </div>
-                                            <div class="match-highlight-video-btn">
-                                                <a href="https://www.youtube.com/watch?v=Y-x0efG1seA"
-                                                    class="popup-video" data-cursor-text="Play">
-                                                    <i class="fa-solid fa-play"></i>
-                                                </a>
-                                                <p>5:27 mins</p>
+                                            <div class="">
+                                                <a href="/world-record-detail" class="readmore-btn">World Record</a>
+                                                <p></p>
                                             </div>
                                         </div>
                                         <!-- Match Highlight Item Body End -->
@@ -677,7 +671,7 @@ get_header();
                                         <!-- Match Highlight Item Image Start -->
                                         <div class="match-highlight-item-image">
                                             <figure class="image-anime">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/match-highlight-image-3.jpg"
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/womenscroll.png"
                                                     alt="">
                                             </figure>
                                         </div>
@@ -686,14 +680,11 @@ get_header();
                                         <!-- Match Highlight Item Body Start -->
                                         <div class="match-highlight-item-body">
                                             <div class="match-highlight-item-content">
-                                                <h3>United Strikes Back: Drama Unfolds Against Thunder</h3>
+                                                <h3></h3>
                                             </div>
-                                            <div class="match-highlight-video-btn">
-                                                <a href="https://www.youtube.com/watch?v=Y-x0efG1seA"
-                                                    class="popup-video" data-cursor-text="Play">
-                                                    <i class="fa-solid fa-play"></i>
-                                                </a>
-                                                <p>5:27 mins</p>
+                                            <div class="">
+                                                <a href="/world-record-detail" class="readmore-btn">World Record</a>
+                                                <p></p>
                                             </div>
                                         </div>
                                         <!-- Match Highlight Item Body End -->
@@ -709,7 +700,7 @@ get_header();
                                         <!-- Match Highlight Item Image Start -->
                                         <div class="match-highlight-item-image">
                                             <figure class="image-anime">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/match-highlight-image-5.jpg"
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/womenscroll.png"
                                                     alt="">
                                             </figure>
                                         </div>
@@ -718,14 +709,11 @@ get_header();
                                         <!-- Match Highlight Item Body Start -->
                                         <div class="match-highlight-item-body">
                                             <div class="match-highlight-item-content">
-                                                <h3>Tension, Technique, and Triumph - Full Match Story</h3>
+                                                <h3></h3>
                                             </div>
-                                            <div class="match-highlight-video-btn">
-                                                <a href="https://www.youtube.com/watch?v=Y-x0efG1seA"
-                                                    class="popup-video" data-cursor-text="Play">
-                                                    <i class="fa-solid fa-play"></i>
-                                                </a>
-                                                <p>5:27 mins</p>
+                                            <div class="">
+                                                <a href="/world-record-detail" class="readmore-btn">World Record</a>
+                                                <p></p>
                                             </div>
                                         </div>
                                         <!-- Match Highlight Item Body End -->
@@ -741,7 +729,7 @@ get_header();
                                         <!-- Match Highlight Item Image Start -->
                                         <div class="match-highlight-item-image">
                                             <figure class="image-anime">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/match-highlight-image-5.jpg"
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/womenscroll.png"
                                                     alt="">
                                             </figure>
                                         </div>
@@ -750,14 +738,11 @@ get_header();
                                         <!-- Match Highlight Item Body Start -->
                                         <div class="match-highlight-item-body">
                                             <div class="match-highlight-item-content">
-                                                <h3>Blaze Ignites Late Comeback - A Match to Remember</h3>
+                                                <h3></h3>
                                             </div>
-                                            <div class="match-highlight-video-btn">
-                                                <a href="https://www.youtube.com/watch?v=Y-x0efG1seA"
-                                                    class="popup-video" data-cursor-text="Play">
-                                                    <i class="fa-solid fa-play"></i>
-                                                </a>
-                                                <p>5:27 mins</p>
+                                            <div class="">
+                                                <a href="/world-record-detail" class="readmore-btn">World Record</a>
+                                                <p></p>
                                             </div>
                                         </div>
                                         <!-- Match Highlight Item Body End -->

@@ -1,4 +1,3 @@
-console.log('admin.js loaded');
 jQuery(document).ready(function ($) {
     "use strict";
 
@@ -37,16 +36,15 @@ jQuery(document).ready(function ($) {
         });
 
         function getDashboardStats(type = 'today', start = '', end = '') {
-            console.log('function loaaded')
             $.ajax({
-                url: wgtdata.ajaxurl,
+                url: ajaxurl,
                 method: 'POST',
                 data: {
                     action: 'get_dashboard_stats',
                     type: type,
                     start_date: start,
                     end_date: end,
-                    security: wgtdata.nonce
+                    security: $('#dashboard_stats_nonce').val()
                 },
                 success: function (response) {
                     if (response.success) {
@@ -135,7 +133,7 @@ jQuery(document).ready(function ($) {
                 strictMode: true,
                 initialCountry: "us",
                 separateDialCode: true,
-                utilsScript: ibrData.themeUrl + "/assets/js/utils.js"
+                utilsScript: wgtData.themeUrl + "/assets/js/utils.js"
             });
             $input.data('iti', iti);
 
@@ -307,10 +305,10 @@ jQuery(document).ready(function ($) {
         data.forEach(field => formData[field.name] = field.value);
 
         $.ajax({
-            url: ibrData.ajaxurl,
+            url: wgtData.ajaxurl,
             method: 'POST',
             data: {
-                action: 'ibr_create_role',
+                action: 'wgt_create_role',
                 ...formData
             },
             beforeSend: function () {
@@ -337,11 +335,11 @@ jQuery(document).ready(function ($) {
         data.forEach(field => formData[field.name] = field.value);
 
         $.ajax({
-            url: ibrData.ajaxurl,
+            url: wgtData.ajaxurl,
             method: 'POST',
             data: {
-                action: 'ibr_update_user_data',
-                // nonce: ibrData.editUserNonce, // Make sure you localize this
+                action: 'wgt_update_user_data',
+                // nonce: wgtData.editUserNonce, // Make sure you localize this
                 ...formData
             },
             beforeSend: function () {
@@ -377,7 +375,7 @@ jQuery(document).ready(function ($) {
         var id = $(this).data('user-id'),
             nonce = $(this).data('nonce');
 
-        $.post(ibrData.ajaxurl, { action: 'ibr_get_user_data', user_id: id, nonce: nonce })
+        $.post(wgtData.ajaxurl, { action: 'wgt_get_user_data', user_id: id, nonce: nonce })
             .done(function (res) {
                 if (res.success) {
                     var u = res.data;
@@ -414,7 +412,7 @@ jQuery(document).ready(function ($) {
         e.preventDefault();
         var id = $(this).data('user-id');
         var nonce = $(this).data('nonce');
-        $.post(ibrData.ajaxurl, { action: 'ibr_get_user_data', user_id: id, nonce: nonce })
+        $.post(wgtData.ajaxurl, { action: 'wgt_get_user_data', user_id: id, nonce: nonce })
             .done(function (res) {
                 if (res.success) {
                     var u = res.data;
@@ -480,16 +478,16 @@ jQuery(document).ready(function ($) {
             action: "update_certificate_fee",
             id: id,
             new_fee: newFee,
-            _ajax_nonce: ibrData.nonce
+            _ajax_nonce: wgtData.nonce
         };
 
         $.ajax({
-            url: ibrData.ajaxurl,
+            url: wgtData.ajaxurl,
             type: "POST",
             data: data,
             success: function (response) {
                 if (response.success) {
-                    $(`.fee-display-${id}`).html(`${parseFloat(newFee).toFixed(2)} ${ibrData.currency}`);
+                    $(`.fee-display-${id}`).html(`${parseFloat(newFee).toFixed(2)} ${wgtData.currency}`);
                     $(`.fee-edit-${id}`).html(`
                         <a href='javascript:void(0);' class='edit-fee' data-id='${id}'>
                             <span class='dashicons dashicons-edit'></span>
@@ -523,7 +521,7 @@ jQuery(document).ready(function ($) {
             action: 'toggle_record_status',
             record_id: recordId,
             status: newStatus,
-            _ajax_nonce: ibrData.nonce
+            _ajax_nonce: wgtData.nonce
         }, function (response) {
             if (response.success) {
                 $('#status-label-' + recordId).text(newStatus);
@@ -534,7 +532,7 @@ jQuery(document).ready(function ($) {
         });
     });
 
-    const $form = $('#ibr-filter-form');
+    const $form = $('#wgt-filter-form');
 
     // Submit on any <select> or date <input> change
     $form.find('select, input[type="date"]').on('change', function () {
@@ -578,7 +576,7 @@ jQuery(document).ready(function ($) {
             title: 'Select Images',
             button: { text: 'Use These' },
             multiple: true,
-            library: {
+            lwgtary: {
                 type: 'image' // ✅ restricts to images only
             }
         });
@@ -766,7 +764,7 @@ jQuery(document).ready(function ($) {
                 title: "Select or Upload Image",
                 button: { text: "Use this image" },
                 multiple: false,
-                library: {
+                lwgtary: {
                     type: 'image' // ✅ restricts to images only
                 }
             });
@@ -809,9 +807,9 @@ jQuery(document).ready(function ($) {
             e.preventDefault();
 
             let formData = new FormData(form);
-            // formData.append('_ajax_nonce', ibr-admin-script.nonce); // localized from wp_enqueue_script
+            // formData.append('_ajax_nonce', wgt-admin-script.nonce); // localized from wp_enqueue_script
 
-            fetch(ibrData.ajaxurl, {
+            fetch(wgtData.ajaxurl, {
                 method: 'POST',
                 body: formData,
                 credentials: 'same-origin'
@@ -847,7 +845,7 @@ jQuery(document).ready(function ($) {
         // Create new media frame restricted to PDFs
         consentUploader = wp.media({
             title: 'Select Consent Form (PDF Only)',
-            library: { type: 'application/pdf' }, // ✅ Only PDFs allowed
+            lwgtary: { type: 'application/pdf' }, // ✅ Only PDFs allowed
             button: { text: 'Use This File' },
             multiple: false
         });
@@ -953,7 +951,7 @@ if (document.querySelector("#mobile_display")) {
 
     function updateStates(isInitialLoad = false) {
         const selectedCountry = $country.val();
-        const states = window.ibrData?.woocommerce_states?.[selectedCountry] || {};
+        const states = window.wgtData?.woocommerce_states?.[selectedCountry] || {};
 
         // Get existing value only on initial load
         const currentValue = isInitialLoad

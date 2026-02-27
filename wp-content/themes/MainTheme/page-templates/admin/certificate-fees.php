@@ -14,10 +14,10 @@ $results = $wpdb->get_results($query);
 ?>
 <div class="wrap">
     <?php include_once get_template_directory() . '/page-templates/admin/tabs.php'; ?>
-    <h1>IBR Certificate Fees</h1>
+    <h1>WGT Certificate Fees</h1>
 
     <form method="get" class="search-box" style="margin-bottom: 10px;">
-        <input type="hidden" name="page" value="ibr" />
+        <input type="hidden" name="page" value="wgt" />
         <input type="hidden" name="tab" value="certificate-fees" />
         <label for="filter_module" class="screen-reader-text">Filter by Module:</label>
         <input
@@ -27,7 +27,7 @@ $results = $wpdb->get_results($query);
             value="<?php echo esc_attr($filter_module); ?>"
             placeholder="Filter by Module" />
         <input type="submit" class="button" value="Filter" />
-        <a href="?page=ibr&tab=certificate-fees" class="button">Reset</a>
+        <a href="?page=wgt&tab=certificate-fees" class="button">Reset</a>
     </form>
 
     <table class="widefat striped mt-3">
@@ -51,7 +51,7 @@ $results = $wpdb->get_results($query);
                         <td>" . esc_html($row->applier) . "</td>
                         <td>" . esc_html($row->country) . "</td>
                         <td>
-                            <span class='fee-display-{$row->id}'>" . esc_html(number_format($row->fees, 2)) . " " . $store_currency . ((ibr_has_edit_access()) ? "
+                            <span class='fee-display-{$row->id}'>" . esc_html(number_format($row->fees, 2)) . " " . $store_currency . ((wgt_has_edit_access()) ? "
                                 <a href='javascript:void(0);' class='edit-fee' data-id='{$row->id}'>
                                     <span class='dashicons dashicons-edit'></span>
                                 </a>" : "") . "

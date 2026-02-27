@@ -19,7 +19,7 @@ $customers = get_users([
     'orderby' => 'display_name',
     'order'   => 'ASC',
 ]);
-$cat = ibr_get_category_by_fee_id($record['category_fee_id']);
+$cat = wgt_get_category_by_fee_id($record['category_fee_id']);
 $holder1 = $record['holders'][0] ?? [];
 $holder2 = $record['holders'][1] ?? [];
 $holder3 = $record['holders'][2] ?? [];
@@ -41,22 +41,22 @@ $save_disabled = disable_save_button_for_old_applications($record['created_at'])
         <div class="row">
             <div class="col-md-3">
                 <div class="nav flex-column nav-pills" role="tablist">
-                    <a href="<?= 'admin.php?page=ibr&tab=records&section=basicdetails&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'basicdetails' ? 'active' : ''); ?>">Basic Details</a>
-                    <a href="<?= 'admin.php?page=ibr&tab=records&section=addressdetails&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'addressdetails' ? 'active' : ''); ?>">Address Details</a>
-                    <a href="<?= 'admin.php?page=ibr&tab=records&section=recorddetails&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'recorddetails' ? 'active' : ''); ?>">Record Details</a>
-                    <a href="<?= 'admin.php?page=ibr&tab=records&section=evidenceimages&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'evidenceimages' ? 'active' : ''); ?>">Evidance Images</a>
-                    <a href="<?= 'admin.php?page=ibr&tab=records&section=mediacoverageimages&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'mediacoverageimage' ? 'active' : ''); ?>">Media Coverage Images</a>
-                    <a href="<?= 'admin.php?page=ibr&tab=records&section=evidencevideos&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'evidencevideo' ? 'active' : ''); ?>">Evidance Videos</a>
-                    <a href="<?= 'admin.php?page=ibr&tab=records&section=bannerandfeatureimagevideos&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'bannerandfeatureimagevideo' ? 'active' : ''); ?>">Banner and Feature Image Videos</a>
-                    <a href="<?= 'admin.php?page=ibr&tab=records&section=concentform&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'concentform' ? 'active' : ''); ?>">Concent Form</a>
-                    <a href="<?= 'admin.php?page=ibr&tab=records&section=payment&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'payment' ? 'active' : ''); ?>">Payment Details</a>
+                    <a href="<?= 'admin.php?page=wgt&tab=records&section=basicdetails&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'basicdetails' ? 'active' : ''); ?>">Basic Details</a>
+                    <a href="<?= 'admin.php?page=wgt&tab=records&section=addressdetails&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'addressdetails' ? 'active' : ''); ?>">Address Details</a>
+                    <a href="<?= 'admin.php?page=wgt&tab=records&section=recorddetails&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'recorddetails' ? 'active' : ''); ?>">Record Details</a>
+                    <a href="<?= 'admin.php?page=wgt&tab=records&section=evidenceimages&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'evidenceimages' ? 'active' : ''); ?>">Evidance Images</a>
+                    <a href="<?= 'admin.php?page=wgt&tab=records&section=mediacoverageimages&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'mediacoverageimage' ? 'active' : ''); ?>">Media Coverage Images</a>
+                    <a href="<?= 'admin.php?page=wgt&tab=records&section=evidencevideos&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'evidencevideo' ? 'active' : ''); ?>">Evidance Videos</a>
+                    <a href="<?= 'admin.php?page=wgt&tab=records&section=bannerandfeatureimagevideos&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'bannerandfeatureimagevideo' ? 'active' : ''); ?>">Banner and Feature Image Videos</a>
+                    <a href="<?= 'admin.php?page=wgt&tab=records&section=concentform&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'concentform' ? 'active' : ''); ?>">Concent Form</a>
+                    <a href="<?= 'admin.php?page=wgt&tab=records&section=payment&id=' . esc_attr($record_id); ?>" class="nav-link <?= ($record_section === 'payment' ? 'active' : ''); ?>">Payment Details</a>
                 </div>
             </div>
 
             <div class="col-md-9">
                 <div class="tab-content">
                     <form id="record-edit-form" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="ibr_record_nonce" value="<?php echo wp_create_nonce('ibr_record_nonce_update'); ?>">
+                        <input type="hidden" name="wgt_record_nonce" value="<?php echo wp_create_nonce('wgt_record_nonce_update'); ?>">
                         <input type="hidden" name="action" value="edit_record_section">
                         <input type="hidden" name="record_id" value="<?= esc_attr($record_id); ?>">
                         <input type="hidden" name="section" value="<?= esc_attr($record_section); ?>">

@@ -8,7 +8,7 @@ $payments_table->prepare_items();
     <form method="get" action="">
         <!-- Preserve the tab parameter -->
         <input type="hidden" name="tab" value="payments" />
-        <input type="hidden" name="page" value="ibr" />
+        <input type="hidden" name="page" value="wgt" />
         <!-- Search box -->
         <p class="search-box">
             <label class="screen-reader-text" for="payment-search-input"><?php _e('Search Payments:', 'textdomain'); ?></label>

@@ -11,12 +11,12 @@ if ($active_tab === 'records') {
 
     // Filters + Search UI
 ?>
-    <form method="get" id="ibr-filter-form" class="ibr-modern-filters">
-        <input type="hidden" name="page" value="ibr" />
+    <form method="get" id="wgt-filter-form" class="wgt-modern-filters">
+        <input type="hidden" name="page" value="wgt" />
         <input type="hidden" name="tab" value="records" />
 
-        <div class="ibr-filters-grid">
-            <div class="ibr-filter">
+        <div class="wgt-filters-grid">
+            <div class="wgt-filter">
                 <label>Status</label>
                 <select name="status">
                     <option value="">All</option>
@@ -25,7 +25,7 @@ if ($active_tab === 'records') {
                 </select>
             </div>
 
-            <div class="ibr-filter">
+            <div class="wgt-filter">
                 <label>Category</label>
                 <select name="category">
                     <option value="">All</option>
@@ -37,7 +37,7 @@ if ($active_tab === 'records') {
                 </select>
             </div>
 
-            <div class="ibr-filter">
+            <div class="wgt-filter">
                 <label>Country</label>
                 <select name="country">
                     <option value="">All</option>
@@ -54,7 +54,7 @@ if ($active_tab === 'records') {
                 </select>
             </div>
 
-            <div class="ibr-filter">
+            <div class="wgt-filter">
                 <label>Approval</label>
                 <select name="approval">
                     <option value="">All</option>
@@ -67,24 +67,24 @@ if ($active_tab === 'records') {
                 </select>
             </div>
 
-            <div class="ibr-filter">
+            <div class="wgt-filter">
                 <label>Attempt Date</label>
-                <div class="ibr-date-range">
+                <div class="wgt-date-range">
                     <input type="date" name="attempt_from" value="<?= esc_attr($_GET['attempt_from'] ?? '') ?>" placeholder="From">
                     <input type="date" name="attempt_to" value="<?= esc_attr($_GET['attempt_to'] ?? '') ?>" placeholder="To">
                 </div>
             </div>
 
-            <div class="ibr-filter">
+            <div class="wgt-filter">
                 <label>Application Created Date</label>
-                <div class="ibr-date-range">
+                <div class="wgt-date-range">
                     <input type="date" name="created_from" value="<?= esc_attr($_GET['created_from'] ?? '') ?>" placeholder="From">
                     <input type="date" name="created_to" value="<?= esc_attr($_GET['created_to'] ?? '') ?>" placeholder="To">
                 </div>
             </div>
         </div>
 
-        <div class="ibr-search-wrap">
+        <div class="wgt-search-wrap">
             <input type="text" name="s" value="<?= esc_attr($_GET['s'] ?? '') ?>" placeholder="Search Application ID, User Reg ID or Email">
             <a href="<?php echo esc_url(remove_query_arg(array(
                 'status','category','country','approval','attempt_from','attempt_to','created_from','created_to','s'
@@ -97,7 +97,7 @@ if ($active_tab === 'records') {
 
 <?php
     // Scrollable wrapper for table
-    echo '<div class="ibr-table-wrapper ibr-records-table" style="overflow-x: auto;">';
+    echo '<div class="wgt-table-wrapper wgt-records-table" style="overflow-x: auto;">';
     $records_list_table->display();
     echo '</div>';
 }
